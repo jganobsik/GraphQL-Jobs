@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import ApolloClient, { gql } from 'apollo-boost';
 import './App.css';
 import {ApolloProvider} from 'react-apollo';
-
+import CityQuery from './CityQuery';
 
 const client = new ApolloClient({
   uri: "https://api.graphql.jobs/"
@@ -28,6 +28,7 @@ const App = () => (
 <ApolloProvider client={client}>
   <div>
     <h1>GraphQL Jobs</h1>
+    <CityQuery />
   </div>
 </ApolloProvider>
   );
