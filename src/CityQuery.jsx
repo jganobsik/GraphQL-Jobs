@@ -8,6 +8,7 @@ const JOBS_BY_CITY = gql`{
     jobs{
     title
     applyUrl
+    description
     company{
       name
       websiteUrl
@@ -28,7 +29,8 @@ export default function JobsByCity() {
         return(
             <>
             <h3 key={id}>{job.title}</h3>
-            <p>{job.company.name}</p>
+            <h5>Company: {job.company.name}</h5>
+            <p>{job.description}</p>
             <a href={job.applyUrl}>Apply on Company Website</a>
             </>
             )
