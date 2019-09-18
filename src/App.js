@@ -1,6 +1,11 @@
 import React from 'react';
 import logo from './logo.svg';
+import ApolloClient from 'apollo-boost';
 import './App.css';
+
+const client = new ApolloClient({
+  uri: 
+});
 
 function App() {
   return (
